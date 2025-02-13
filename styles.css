@@ -1,0 +1,122 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:cadetblue;
+    color: bisque;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+button {
+    position: absolute;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color:blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(100px);
+    margin: 10px;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#no {
+    margin-top: 10%; 
+}
+
+#hiddenText {
+    display: none;
+    margin-top: 300px;
+    font-size: 18px;
+    position: absolute;
+}
+
+button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.floating-text{
+    font-size:xx-large;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    animation: floatOut 4s ease-out forwards;
+}
+
+.second{
+    font-size:xx-large;
+    font-weight: bold;
+    position: absolute;
+    animation: floatOut 4s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.third{
+    font-size:xx-large;
+    font-weight: bold;
+    position: absolute;
+    animation: floatOut 4s ease-out forwards;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+.fourth{
+    font-size:xx-large;
+    font-weight: bold;
+    position: absolute;
+    animation: floatUp 4s ease-out forwards;
+    animation-delay: 15s;
+    opacity: 0;
+}
+
+.image {
+    position: absolute;
+    width: 20%;
+    bottom: -150px; 
+    opacity: 0; 
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.float {
+    transform: translateY(-50vh); 
+    opacity: 1;
+}
+
+.floatUpp {
+    transform: translateY(-1000vh); 
+    opacity: 0;
+}
+
+
+@keyframes floatUp {
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: 70%;
+        opacity: 1;
+    }
+}
+
+@keyframes floatOut {
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    50%{
+        bottom: 70%;
+        opacity: 1;
+    }
+    100%{
+        bottom: 100%;
+        opacity: 0;
+    }
+}
